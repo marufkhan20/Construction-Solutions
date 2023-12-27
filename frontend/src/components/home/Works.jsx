@@ -13,7 +13,7 @@ const Works = () => {
         />
 
         <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-7">
-          <div className="relative">
+          <Link href="/projects/1" className="relative">
             <img
               className="rounded-xl w-full h-full"
               src="/images/works/1.jpeg"
@@ -22,8 +22,8 @@ const Works = () => {
             <span className="text-white text-lg leading-[32px] absolute bottom-[18px] left-[18px]">
               Front working space
             </span>
-          </div>
-          <div className="relative">
+          </Link>
+          <Link href="/projects/1" className="relative">
             <img
               className="rounded-xl w-full h-full"
               src="/images/works/2.jpeg"
@@ -32,8 +32,8 @@ const Works = () => {
             <span className="text-white text-lg leading-[32px] absolute bottom-[18px] left-[18px]">
               Meeting corner
             </span>
-          </div>
-          <div className="relative">
+          </Link>
+          <Link href="/projects/1" className="relative">
             <img
               className="rounded-xl w-full h-full"
               src="/images/works/3.jpeg"
@@ -42,8 +42,8 @@ const Works = () => {
             <span className="text-white text-lg leading-[32px] absolute bottom-[18px] left-[18px]">
               Guest meeting room
             </span>
-          </div>
-          <div className="relative">
+          </Link>
+          <Link href="/projects/1" className="relative">
             <img
               className="rounded-xl w-full h-full"
               src="/images/works/4.jpeg"
@@ -52,8 +52,8 @@ const Works = () => {
             <span className="text-white text-lg leading-[32px] absolute bottom-[18px] left-[18px]">
               Guest rest room
             </span>
-          </div>
-          <div className="relative">
+          </Link>
+          <Link href="/projects/1" className="relative">
             <img
               className="rounded-xl w-full h-full"
               src="/images/works/5.jpeg"
@@ -62,8 +62,8 @@ const Works = () => {
             <span className="text-white text-lg leading-[32px] absolute bottom-[18px] left-[18px]">
               Single working space
             </span>
-          </div>
-          <div className="relative">
+          </Link>
+          <Link href="/projects/1" className="relative">
             <img
               className="rounded-xl w-full h-full"
               src="/images/works/6.jpeg"
@@ -72,7 +72,7 @@ const Works = () => {
             <span className="text-white text-lg leading-[32px] absolute bottom-[18px] left-[18px]">
               Kitchen room
             </span>
-          </div>
+          </Link>
         </div>
         <div className="mt-10 flex items-center justify-center">
           <Link

@@ -1,9 +1,14 @@
+import Link from "next/link";
+
 const Product = () => {
   return (
     <div>
-      <div className="bg-[#FAFAFA] rounded-tr-[20px] rounded-tl-[20px] min-h-[240px] w-full flex items-center justify-center p-9">
+      <Link
+        href="/products/1"
+        className="bg-[#FAFAFA] rounded-tr-[20px] rounded-tl-[20px] min-h-[240px] w-full flex items-center justify-center p-9"
+      >
         <img src="/images/products/1.png" alt="product" />
-      </div>
+      </Link>
       <div className="px-[22px] py-[14px]">
         <span className="text-[#8D8D8D]">Chair</span>
         <h3 className="text-[22px] text-[#0D1B39] font-semibold capitalize">

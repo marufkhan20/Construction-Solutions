@@ -3,7 +3,7 @@ import Link from "next/link";
 const Service = ({ icon, title = "", description = "" }) => {
   return (
     <Link
-      href="/"
+      href="/services"
       className="py-10 px-5 rounded-2xl service-item transition-all"
     >
       {icon}
