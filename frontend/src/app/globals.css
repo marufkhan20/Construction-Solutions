@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #525252;
+}
+
+.font-dm-sans {
+  font-family: "DM Sans", sans-serif !important;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.font-plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+section {
+  padding: 96px 24px;
+}
+
+section.secondary {
+  padding: 72px 24px;
+}
+
+.text-primary-light {
+  color: rgba(58, 163, 159, 0.1);
+}
+
+.bg-primary-light {
+  background: rgba(58, 163, 159, 0.1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.button-shadow {
+}
+
+.service-item {
+  box-shadow: 18px 15px 35px 0px rgba(0, 0, 0, 0.09);
+}
+
+.service-item svg path {
+  fill: #3aa39f;
+}
+
+.service-item:hover {
+  background: #3aa39f;
+}
+
+.service-item:hover h3,
+.service-item:hover span {
+  color: white !important;
+}
+
+.service-item:hover svg path {
+  fill: white;
+  stroke: white;
+}
+
+.testimonial-shadow {
+  box-shadow: 18px 15px 35px 0px rgba(0, 0, 0, 0.09);
+}
+
+li {
+  list-style: none;
+}
+
+.service-details {
+  width: calc(100% - 332px);
+}
+
+.border-right {
+  border-right: 1px solid rgba(82, 82, 82, 0.4);
+}
+
+.product-shadow {
+  opacity: 0.1;
+  background: linear-gradient(
+    270deg,
+    #4b8785 54.22%,
+    rgba(75, 135, 133, 0) 99.85%
+  );
+}
+
+.order-details {
+  width: calc(100% - 460px);
+}
+
+@media (max-width: 777px) {
+  .service-details {
+    width: 100%;
+  }
+  .order-details {
+    width: 100%;
+  }
+}
