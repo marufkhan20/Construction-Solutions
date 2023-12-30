@@ -1,6 +1,6 @@
 const SidebarItem = ({ title = "" }) => {
   return (
-    <li className="p-[10px] bg-[#EAE6E6] flex items-center justify-between text-[#525252] stroke-[#525252] cursor-pointer transition-all hover:bg-primary hover:text-white hover:stroke-white">
+    <li className="p-[10px] bg-[#EAE6E6] flex items-center justify-between text-[#525252] stroke-[#525252] cursor-pointer transition-all hover:bg-grey hover:text-white hover:stroke-white">
       <span>{title}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

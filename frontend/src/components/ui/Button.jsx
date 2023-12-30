@@ -11,8 +11,8 @@ const Button = ({
 }) => {
   const styles = `px-9 transition-all border border-transparent py-3 font-semibold text-sm ${
     variant === "primary" &&
-    "bg-primary text-white hover:border-primary hover:bg-transparent hover:text-primary"
-  } ${variant === "secondary" && "bg-tranparent text-primary"}`;
+    "bg-grey text-white hover:border-grey hover:bg-transparent hover:text-grey"
+  } ${variant === "secondary" && "bg-tranparent text-grey"}`;
 
   return href ? (
     <Link href={href} className={cn(styles, className)}>

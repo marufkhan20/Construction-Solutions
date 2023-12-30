@@ -11,7 +11,7 @@ const Heading = ({
       <h2 className="text-[40px] sm:text-[55px] md:text-[67px] leading-[50px] sm:leading-[60px] md:leading-[72px] text-black font-montserrat">
         {title}
       </h2>
-      <h2 className="text-[40px] sm:text-[55px] md:text-[67px] leading-[50px] sm:leading-[60px] md:leading-[72px] text-primary font-montserrat">
+      <h2 className="text-[40px] sm:text-[55px] md:text-[67px] leading-[50px] sm:leading-[60px] md:leading-[72px] text-grey font-montserrat">
         {subTitle}
       </h2>
       <p

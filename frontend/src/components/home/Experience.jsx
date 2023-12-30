@@ -5,7 +5,7 @@ const Experience = () => {
     <section className="secondary bg-primary-light font-plus-jakarta-sans">
       <div className="container flex flex-col md:flex-row items-center gap-20">
         <div className="w-full md:w-[50%]">
-          <div className="w-[80%] h-[66px] bg-[#F7F7F7] rounded-tr-[20px]" />
+          <div className="hidden sm:block w-[80%] h-[66px] bg-[#F7F7F7] rounded-tr-[20px]" />
           <div className="flex items-center">
             <img
               src="/images/experience.png"
@@ -45,7 +45,7 @@ const Experience = () => {
             >
               <path
                 d="M4.5 13.3509H42M42 13.3509C42 13.3509 37.5119 10.3993 36.6 7.95093M42 13.3509C42 13.3509 38.0324 16.1243 36.6 18.7509"
-                stroke="#3AA39F"
+                stroke="#565D67"
                 stroke-linecap="square"
               />
             </svg>

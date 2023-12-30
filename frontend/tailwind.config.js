@@ -11,9 +11,10 @@ module.exports = {
         center: true,
       },
       colors: {
-        primary: "#3AA39F",
+        primary: "#565D67",
         secondary: "#8B919E",
         paragraph: "#525252",
+        grey: "#565D67",
       },
     },
   },

@@ -10,9 +10,9 @@ import Button from "../ui/Button";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <header className="fixed top-0 left-0 right-0 w-full bg-white px-6 flex items-center justify-between gap-5 flex-wrap py-[18px] font-dm-sans z-50">
+    <header className="fixed top-0 left-0 right-0 w-full bg-white px-6 flex items-center justify-between gap-5 flex-wrap py-[18px] font-dm-sans z-50 border-b border-black/40">
       <Link href="/" className="lg:ml-[70px]">
-        <img src="/images/logo.png" alt="logo" />
+        <img src="/images/logo.svg" alt="logo" />
       </Link>
       <nav className="hidden xl:block">
         <ul className="flex items-center flex-wrap gap-10 text-secondary">
@@ -20,16 +20,13 @@ const Header = () => {
             <a href="#">Home</a>
           </li>
           <li className="transition-all hover:text-primary">
+            <a href="#shop">Shop</a>
+          </li>
+          <li className="transition-all hover:text-primary">
             <a href="#services">Services</a>
           </li>
           <li className="transition-all hover:text-primary">
             <a href="#portfolio">Portfolio</a>
-          </li>
-          <li className="transition-all hover:text-primary">
-            <a href="#testimonials">Testimonial</a>
-          </li>
-          <li className="transition-all hover:text-primary">
-            <a href="#shop">Shop</a>
           </li>
         </ul>
       </nav>
@@ -41,7 +38,7 @@ const Header = () => {
         >
           <FaCartShopping className="hidden sm:block" />
           <span className="hidden sm:block">Cart</span>
-          <span className="hidden sm:flex text-xs w-5 h-5 rounded-full bg-[#007580] text-white items-center justify-center">
+          <span className="hidden sm:flex text-xs w-5 h-5 rounded-full bg-grey text-white items-center justify-center">
             2
           </span>
         </Link>
@@ -66,20 +63,29 @@ const Header = () => {
         </div>
         <nav>
           <ul className="flex flex-col items-center gap-10 text-secondary">
-            <li className="transition-all hover:text-primary">
+            <li
+              className="transition-all hover:text-primary"
+              onClick={() => setOpenMenu(false)}
+            >
               <a href="#">Home</a>
             </li>
-            <li className="transition-all hover:text-primary">
+            <li
+              className="transition-all hover:text-primary"
+              onClick={() => setOpenMenu(false)}
+            >
+              <a href="#shop">Shop</a>
+            </li>
+            <li
+              className="transition-all hover:text-primary"
+              onClick={() => setOpenMenu(false)}
+            >
               <a href="#services">Services</a>
             </li>
-            <li className="transition-all hover:text-primary">
+            <li
+              className="transition-all hover:text-primary"
+              onClick={() => setOpenMenu(false)}
+            >
               <a href="#portfolio">Portfolio</a>
-            </li>
-            <li className="transition-all hover:text-primary">
-              <a href="#testimonials">Testimonial</a>
-            </li>
-            <li className="transition-all hover:text-primary">
-              <a href="#shop">Shop</a>
             </li>
           </ul>
         </nav>
@@ -88,10 +94,11 @@ const Header = () => {
           <Link
             href="/cart"
             className="flex items-center gap-2 py-3 px-4 rounded-lg bg-primary-light text-black font-medium"
+            onClick={() => setOpenMenu(false)}
           >
             <FaCartShopping />
             <span>Cart</span>
-            <span className="text-xs w-5 h-5 rounded-full bg-[#007580] text-white flex items-center justify-center">
+            <span className="text-xs w-5 h-5 rounded-full bg-grey text-white flex items-center justify-center">
               2
             </span>
           </Link>

@@ -1,6 +1,6 @@
 const Companies = () => {
   return (
-    <section className="py-[50px] bg-primary/10">
+    <section className="py-[50px] bg-primary-light">
       <div className="container flex items-center gap-10 justify-between flex-wrap">
         <img
           src="/images/companies/1.webp"

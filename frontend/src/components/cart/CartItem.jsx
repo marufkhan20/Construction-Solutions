@@ -1,4 +1,9 @@
+"use client";
+
+import { useState } from "react";
+
 const CartItem = () => {
+  const [itemCount, setItemCount] = useState(1);
   return (
     <div className="pb-8 border-b border-[#D1D1D8] flex justify-between gap-5 flex-wrap">
       <div className="flex items-center flex-wrap gap-9">
@@ -21,6 +26,8 @@ const CartItem = () => {
                 height="20"
                 viewBox="0 0 20 20"
                 fill="none"
+                className="cursor-pointer"
+                onClick={() => setItemCount(itemCount - 1)}
               >
                 <path
                   d="M4.16667 10H15.8333"
@@ -30,13 +37,15 @@ const CartItem = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <span className="text-[#17183B] text-lg">1</span>
+              <span className="text-[#17183B] text-lg">{itemCount}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
                 fill="none"
+                className="cursor-pointer"
+                onClick={() => setItemCount(itemCount + 1)}
               >
                 <path
                   d="M10 4.16675V15.8334"

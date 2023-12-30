@@ -1,6 +1,11 @@
+"use client";
 import Button from "@/components/ui/Button";
+import { useState } from "react";
 
 const Product = () => {
+  const [itemCount, setItemCount] = useState(1);
+  const [wishlist, setWishlist] = useState(false);
+  const [color, setColor] = useState(1);
   return (
     <main className="px-5 py-14">
       <div className="px-5 lg:container flex flex-col-reverse md:flex-row justify-between gap-16">
@@ -88,16 +93,36 @@ const Product = () => {
             downs.
           </p>
           <div className="mt-8 flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-[#E8E8EB] flex items-center justify-center cursor-pointer">
+            <div
+              className={`w-7 h-7 rounded-full flex items-center justify-center ${
+                color === 1 ? "bg-[#E8E8EB]" : "bg-transparent"
+              } cursor-pointer`}
+              onClick={() => setColor(1)}
+            >
               <div className="w-5 h-5 rounded-full bg-[#C1BDB3]" />
             </div>
-            <div className="w-7 h-7 rounded-full bg-transparent flex items-center justify-center cursor-pointer">
+            <div
+              className={`w-7 h-7 rounded-full bg-transparent flex items-center justify-center ${
+                color === 2 ? "bg-[#58737D]/20" : "bg-transparent"
+              } cursor-pointer`}
+              onClick={() => setColor(2)}
+            >
               <div className="w-5 h-5 rounded-full bg-[#58737D]" />
             </div>
-            <div className="w-7 h-7 rounded-full bg-transparent flex items-center justify-center cursor-pointer">
+            <div
+              className={`w-7 h-7 rounded-full bg-transparent flex items-center justify-center ${
+                color === 3 ? "bg-[#545454]/20" : "bg-transparent"
+              } cursor-pointer`}
+              onClick={() => setColor(3)}
+            >
               <div className="w-5 h-5 rounded-full bg-[#545454]" />
             </div>
-            <div className="w-7 h-7 rounded-full bg-transparent flex items-center justify-center cursor-pointer">
+            <div
+              className={`w-7 h-7 rounded-full bg-transparent flex items-center justify-center ${
+                color === 4 ? "bg-[#CBA5A5]/20" : "bg-transparent"
+              } cursor-pointer`}
+              onClick={() => setColor(4)}
+            >
               <div className="w-5 h-5 rounded-full bg-[#CBA5A5]" />
             </div>
           </div>
@@ -109,6 +134,8 @@ const Product = () => {
                 height="20"
                 viewBox="0 0 20 20"
                 fill="none"
+                className="cursor-pointer"
+                onClick={() => setItemCount(itemCount - 1)}
               >
                 <path
                   d="M4.16667 10H15.8333"
@@ -118,13 +145,15 @@ const Product = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <span className="text-[#17183B] text-lg">1</span>
+              <span className="text-[#17183B] text-lg">{itemCount}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
                 fill="none"
+                className="cursor-pointer"
+                onClick={() => setItemCount(itemCount + 1)}
               >
                 <path
                   d="M10 4.16675V15.8334"
@@ -148,13 +177,16 @@ const Product = () => {
             Free 3-5 day shipping • Tool-free assembly • 30-day trial
           </p>
           <div className="mt-20 flex items-center justify-between gap-5 flex-wrap">
-            <button className="text-base text-primary flex items-center gap-2 font-semibold">
+            <button
+              className="text-base text-primary flex items-center gap-2 font-semibold cursor-pointer"
+              onClick={() => setWishlist(!wishlist)}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                fill="none"
+                fill={wishlist ? "#3AA39F" : "none"}
               >
                 <path
                   d="M20.84 4.61012C20.3292 4.09912 19.7228 3.69376 19.0554 3.4172C18.3879 3.14064 17.6725 2.99829 16.95 2.99829C16.2275 2.99829 15.5121 3.14064 14.8446 3.4172C14.1772 3.69376 13.5708 4.09912 13.06 4.61012L12 5.67012L10.94 4.61012C9.9083 3.57842 8.50903 2.99883 7.05 2.99883C5.59096 2.99883 4.19169 3.57842 3.16 4.61012C2.1283 5.64181 1.54871 7.04108 1.54871 8.50012C1.54871 9.95915 2.1283 11.3584 3.16 12.3901L4.22 13.4501L12 21.2301L19.78 13.4501L20.84 12.3901C21.351 11.8794 21.7563 11.2729 22.0329 10.6055C22.3095 9.93801 22.4518 9.2226 22.4518 8.50012C22.4518 7.77763 22.3095 7.06222 22.0329 6.39476C21.7563 5.7273 21.351 5.12087 20.84 4.61012V4.61012Z"
@@ -271,23 +303,23 @@ const Product = () => {
           </div>
           <div className="mt-[75px] grid-cols-2 sm:grid-cols-3 grid lg:grid-cols-4 xl:grid-cols-6 gap-6">
             <div className="hidden xl:block"></div>
-            <div className="border-2 rounded-[5px] h-[100px] flex items-center justify-center border-primary p-1 cursor-pointer transition-all hover:border-primary">
+            <div className="w-full h-full border-2 rounded-[5px] flex items-center justify-center border-primary p-1 cursor-pointer transition-all hover:border-primary">
               <img
                 className="w-full mx-h-full"
                 src="/images/products/6.jpeg"
                 alt=""
               />
             </div>
-            <div className="border-2 rounded-[5px] h-[100px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
+            <div className="w-full h-full border-2 rounded-[5px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
               <img src="/images/products/7.jpeg" alt="" />
             </div>
-            <div className="border-2 rounded-[5px] h-[100px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
+            <div className="w-full h-full border-2 rounded-[5px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
               <img src="/images/products/8.jpeg" alt="" />
             </div>
-            <div className="border-2 rounded-[5px] h-[100px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
+            <div className="w-full h-full border-2 rounded-[5px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
               <img src="/images/products/9.jpeg" alt="" />
             </div>
-            <div className="border-2 rounded-[5px] h-[100px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
+            <div className="w-full h-full border-2 rounded-[5px] flex items-center justify-center border-[#D1D1D8] p-1 cursor-pointer transition-all hover:border-primary">
               <img src="/images/products/10.png" alt="" />
             </div>
           </div>

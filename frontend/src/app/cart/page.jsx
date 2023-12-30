@@ -6,7 +6,10 @@ const CartPage = () => {
   return (
     <OrderLayout
       orderButton={
-        <Button href="/process-order" className="w-full rounded">
+        <Button
+          href="/process-order"
+          className="!w-full block text-center rounded"
+        >
           Proceed to Checkout
         </Button>
       }

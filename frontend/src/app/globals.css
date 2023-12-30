@@ -35,11 +35,11 @@ section.secondary {
 }
 
 .text-primary-light {
-  color: rgba(58, 163, 159, 0.1);
+  color: rgba(86, 93, 103, 0.3);
 }
 
 .bg-primary-light {
-  background: rgba(58, 163, 159, 0.1);
+  background: rgba(86, 93, 103, 0.3);
 }
 
 h1,
@@ -59,11 +59,11 @@ h6 {
 }
 
 .service-item svg path {
-  fill: #3aa39f;
+  fill: #565d67;
 }
 
 .service-item:hover {
-  background: #3aa39f;
+  background: #565d67;
 }
 
 .service-item:hover h3,

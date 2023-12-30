@@ -20,7 +20,9 @@ const ProcessOrderPage = () => {
       orderButton={
         <Button
           className="w-full rounded"
-          onClick={() => setActiveTab(activeTab + 1)}
+          onClick={() => {
+            activeTab !== 3 && setActiveTab(activeTab + 1);
+          }}
         >
           {activeTab === 1 && "Continue to Shipping"}
           {activeTab === 2 && "Continue to Payment"}

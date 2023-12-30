@@ -30,7 +30,7 @@ const OrderSidebar = ({ orderButton }) => {
           </li>
           <li className="w-full flex items-center justify-between gap-5">
             <span>Estimated Delivery by</span>
-            <span className="font-semibold">01 Feb, 2023</span>
+            <span className="font-semibold text-right">01 Feb, 2023</span>
           </li>
         </ul>
         <div className="flex items-center justify-between border border-[#A2A3B1] rounded-sm mt-6 p-4 gap-4">
