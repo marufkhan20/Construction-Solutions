@@ -2,6 +2,7 @@
 import ServiceDetails from "@/components/services/ServiceDetails";
 import Sidebar from "@/components/services/sidebar";
 import BreadCumb from "@/components/shared/BreadCumb";
+import Footer from "@/components/shared/Footer";
 import { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
@@ -30,6 +31,7 @@ const ServicesPage = () => {
         <Sidebar openSidebar={openSidebar} />
         <ServiceDetails />
       </div>
+      <Footer />
     </main>
   );
 };

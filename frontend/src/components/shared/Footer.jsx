@@ -22,16 +22,16 @@ const Footer = () => {
             </div>
             <ul className="flex gap-5 flex-col">
               <li>
-                <Link href="#">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
-                <Link href="#">Our Services</Link>
+                <Link href="/services">Our Services</Link>
               </li>
               <li>
-                <Link href="#">Help & FAQs</Link>
+                <Link href="/help-faq">Help & FAQs</Link>
               </li>
               <li>
-                <Link href="#">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>

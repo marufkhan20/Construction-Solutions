@@ -1,4 +1,5 @@
 import BreadCumb from "@/components/shared/BreadCumb";
+import Footer from "@/components/shared/Footer";
 
 const Project = () => {
   return (
@@ -195,6 +196,7 @@ const Project = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 };
